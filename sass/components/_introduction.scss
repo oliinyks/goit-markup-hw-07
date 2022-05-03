@@ -1,0 +1,224 @@
+.introduction{
+	min-height: 600px;
+	background-color: getColor('exyra-bg');
+	background-image: linear-gradient(
+		to right,
+rgba(47, 48, 58, 0.4),
+rgba(47, 48, 58, 0.4)),
+	url('../img/introduction/introduction-bg-2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	letter-spacing: 0.06em;
+	text-align: center;
+}
+.introduction__content{
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+.introduction__title{
+	width: 670px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	color: getColor('primary-bg');
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-transform: uppercase;
+}
+// ----------------------backdrop-----------------------------
+.backdrop{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 100;
+
+	opacity: 1;
+	transition: opacity 250ms $timing-function;
+	&--is-hidden{
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
+	&__modal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+
+	background-color: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	
+	transition: transform 250ms $timing-function;
+}
+}
+
+.button-close{
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	padding: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-height: 30px;
+	max-width: 30px;
+	
+
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 1);
+	border-radius: 50%;
+	background-color: transparent;
+	overflow: hidden;
+	cursor: pointer;
+
+	transition: color 250ms $timing-function;
+	&:hover,&:focus{
+	color: getColor('accent');
+}
+	&__img{
+	fill: currentColor;
+}
+}
+
+// ----------------------form---------------------------
+.form{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px;
+	margin: 0;
+	border: none;
+}
+.form__title{
+	font-size: 20px;
+	margin-bottom: 12px;
+	line-height: 0.8;
+	letter-spacing: 0.03em;
+}
+.form__fild{
+	display: flex;
+	flex-direction: column;
+	width: 448px;
+	position: relative;
+	margin-bottom: 10px;
+
+	&:last-child{
+	margin-bottom: 20px;
+}
+}
+
+.form__input{
+	height: 40px;
+	margin: 0;
+	padding: 11px 0 11px 42px;
+
+	font-size: 12px;
+	line-height: 0.84;
+	letter-spacing: 0.01em;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+
+	transition: border-color 250ms $timing-function;
+}
+.form__fild:active .form__input,
+.form__fild:hover .form__input,
+.form__fild .form__input:focus,
+.form__fild:active .form__textarea,
+.form__fild:hover .form__textarea,
+.form__fild .form__textarea:focus
+{
+	border: 1px solid getColor('accent');
+}
+
+.form__label{
+	text-align: left;
+	font-size: 12px;
+	line-height: 0.84;
+	letter-spacing: 0.01em;
+	margin-bottom: 4px;
+
+	color: getColor('primary-text');
+}
+
+.form__input[type="checkbox"]{
+	font-size: 14px;
+}
+.form__svg{
+	width: 16px;
+	height: 16px;
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform: translate(12px, -11px);
+
+	fill: currentColor;
+	color: getColor('title-text-color');
+	transition: color 250ms $timing-function;
+
+	.form__fild:active &,
+	.form__fild:hover &,
+	.form__fild:focus-within &{
+	color: getColor('accent');
+}
+}
+.form__textarea{
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	resize: none;
+	min-height: 120px;
+	padding: 12px 16px;
+
+	font-size: 12px;
+	line-height: 0.84;
+	letter-spacing: 0.01em;
+
+	transition: border-color 250ms $timing-function;
+	&::placeholder{
+	color: rgba(117, 117, 117, 0.5);
+}
+}
+.form__checkbox{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.form__icon{
+	display: inline-block;
+	width: 16px;
+	height: 15px;
+	margin-right: 8px;
+	margin-bottom: 0;
+
+	border: 2px solid getColor('title-text');
+	border-radius: 2px;
+
+	transition: background-color 250ms $timing-function, color 250ms $timing-function;
+}
+.checkbox:checked + .form__icon{
+	background-color: getColor('accent');
+	border-color: getColor('accent');
+
+	background-image: url('../img/icon-check.svg');
+	background-size: contain;
+	background-origin: border-box;
+}
+.form__link{
+	color: getColor('accent');
+	margin-left: 0.07em;
+	text-decoration: underline;
+}

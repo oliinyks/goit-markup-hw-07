@@ -1,0 +1,15 @@
+$colors: (
+	'primary-text':rgba(117, 117, 117, 1),
+	'title-text':rgba(33, 33, 33, 1),
+	'accent':rgba(33, 150, 243, 1),
+	'primary-bg':rgba(255, 255, 255, 1),
+	'exyra-bg':rgba(47, 48, 58, 1),
+	'cards':rgba(236, 236, 236, 1),
+	'icon':rgba(175, 177, 184, 1),
+	'border':rgba(33, 33, 33, 0.2),
+);
+@function getColor($key) {
+	@return map-get($colors, $key);
+}
+
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

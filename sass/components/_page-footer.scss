@@ -1,0 +1,120 @@
+/* footer */
+.footer{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: getColor('exyra-bg');
+}
+.footer__logo{
+	display: inline-block;
+	margin-bottom: 20px;
+	color: getColor('primary-bg');
+}
+
+//-------------- address-------------------------
+.address-link{
+	color: rgba(255, 255, 255, 0.6);
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+
+	transition: color 250ms $timing-function;
+
+	&:focus, &:hover{
+	color: getColor('accent');
+}
+}
+.address__item + .address__item{
+	margin-top: 9px;
+}
+.link-white{
+	color: getColor('primary-bg');
+}
+// ----------- social-network -----------------------
+.social-network__list,
+.footer__inner{
+	display: flex;
+}
+.social-network{
+	margin-left: 70px;
+}
+.social-network__link {
+	display: block;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: getColor('primary-bg');
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+	padding: 12px;
+
+	transition: background-color 250ms $timing-function;
+
+	.social-network__item > &:hover,
+	.social-network__item > &:focus{
+	background-color: getColor('accent');
+}
+}
+.social-network__item + .social-network__item{
+	margin-left: 10px;
+}
+.social-network__title,
+.subscription__title{
+	color: getColor('primary-bg');
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+.social-network__icon{
+	fill: currentColor;
+}
+
+//-----------subscription----------------
+.subscription {
+	margin-left: 93px;
+}
+.subscription__box{
+	display: flex;
+}
+.subscription__form{
+	display: flex;
+	width: 360px;
+	height: 50px;
+	
+}
+.subscription__input{
+	width: 100%;
+	margin: 0;
+	padding: 15px 0 15px 16px;
+	
+
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+
+	font-size: 16px;
+	line-height: 0.8em;
+	letter-spacing: 0.03em;
+	background-color: getColor('exyra-bg');
+	color: getColor('primary-bg');
+
+	&::placeholder{
+	color: rgba(255, 255, 255, 0.6);	
+}
+}
+
+.subscription__button {
+	position: relative;
+
+	justify-content: center;
+	margin-left: 12px;
+	padding: 10px 62px 10px 30px;
+}
+.subscription__send {
+	position: absolute;
+	top: 50%;
+	right: 28px;
+	transform: translateY(-50%);
+}
+
