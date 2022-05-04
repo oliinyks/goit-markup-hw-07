@@ -280,8 +280,8 @@ p {
 }
 
 body {
-  background-color: get-color("primary-bg");
-  color: get-color("primary-text");
+  background-color: white;
+  color: #757575;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -306,7 +306,7 @@ body {
 .title {
   margin-top: 0;
   margin-bottom: 50px;
-  color: get-color("title-text");
+  color: #212121;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -353,7 +353,7 @@ body {
 }
 
 .header {
-  border-bottom: #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .header__box,
@@ -574,7 +574,7 @@ body {
           transform: translate(-50%, -50%);
   min-width: 322px;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
 }

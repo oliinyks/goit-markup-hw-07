@@ -17,8 +17,8 @@ p{
 
 
 body{
-	background-color: get-color('primary-bg');
-	color: get-color('primary-text');
+	background-color: getColor('primary-bg');
+	color: getColor('primary-text');
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.03em;
@@ -41,7 +41,7 @@ body{
 .title{
 	margin-top: 0;
 	margin-bottom: 50px;
-	color:get-color('title-text');
+	color:getColor('title-text');
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.17;
